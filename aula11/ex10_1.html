@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Brazuca ou Gringo?</h1>
+    <div>
+        <label for="iborn">Qual o seu país de origem?</label>
+        <input type="text" name="born" id="iborn">
+        <input id="nac" type="button" value="Você é...">
+    </div>
+    <div id="res">
+
+    </div>
+
+    <script>
+        nac.addEventListener('click', BRouGRINGO)
+        function BRouGRINGO() {
+            var nasc = document.getElementById('iborn').value
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>Você nasceu no(a)(s) <strong>${nasc}</srtong>.</p>`
+            if (nasc.toLowerCase() == 'brasil') {
+                res.innerHTML += '<p>Sua nacionalidade é <strong>Brasileira</strong></p>'
+            } else {
+                res.innerHTML += '<p>Você não é Brasileiro, mas sim <strong>Gringo</strong></p>'
+            }
+
+        }
+
+    </script>
+</body>
+</html>
