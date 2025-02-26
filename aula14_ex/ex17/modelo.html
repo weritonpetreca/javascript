@@ -3,23 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabuada</title>
+    <title>Analisador de Números</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Tabuada</h1>
+        <h1>Analisador de Números</h1>
     </header>
     <section>
         <div>
-            <label for="itxtn">Número</label>
-            <input type="number" name="txtn" id="itxtn">
-            <input type="button" value="Gerar Tabuada" id="gerar">
+            <p>
+                <label for="itxtn">Número (entre 1 e 100)</label>
+                <input type="number" name="txtn" id="itxtn">
+                <input type="button" value="Adicionar" id="add">
+            </p>
         </div>
         <div>
-            <select name="res" id=ires size="10">
-                <option value="v1">Digite um número acima!</option>
-            </select>
+            <p>
+                <select name="vet" id=ivet size="10" >
+                    <option id="vet0" value="vet0">Adicione os números acima</option>
+                </select>
+            </p>
+            <p><input type="button" value="Finalizar" id="final"></p>
+            <div id="res">
+            </div>
         </div>
     </section>
     <footer>
